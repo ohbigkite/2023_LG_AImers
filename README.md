@@ -5,8 +5,7 @@
 ## Phase2. 온라인 채널 제품 판매량 예측 AI 온라인 해커톤 
 - 2023.08.01 ~ 2023.08.28
 - https://dacon.io/competitions/official/236129/overview/description
-- 결과 : Public  0.54059 80위 / 747
--           Private 0.53146 61위/ 747 (상위 10% 이내)
+- 결과 : **Public  0.54059 80위 / 747 ** Private 0.53146 61위/ 747 (상위 10% 이내)
   ![image](https://github.com/ohbigkite/2023_LG_AImers/assets/122765534/77deacd6-abd3-4ab3-85ca-71c50239c65a)
 - Domain : 시계열예측
 - Task : 15890개의 상품의 판매량 예측 ( train data : 459일치 , test data : 21일치)
