@@ -12,21 +12,23 @@
 - Task : 15890개의 상품의 판매량 예측 ( train data : 459일치 , test data : 21일치)
 
 ### Data
+
 - train.csv : 상품별 대분류, 중분류, 소분류, 브랜드 코드, 판매량
 - sales.csv : meta 정보 - 제품 판매금액 데이터
 - brand_keyword_cnt.csv : meta 정보 - 브랜드 언급량 데이터
 - product_info.csv : meta 정보 - 제품 특성 데이터
   
 ### Model
+
 - LSTM ⭐⭐
 - Seq2Seq ⭐
 - LGBM 
 
 ### Trials
+
 - Multi Items Multivariate Timeseries Forecasting
 - Window size 90일로, 90일의 과거 데이터를 이용해 추후 21일 예측하는 식으로 학습 진행
-- 메타데이터 활용 → (1) 브랜드 언급량 feature 추가
--                   (2) 브랜드 언급량 / 판매량 추이 데이터 이용해, timeseries k-means clustering 진행한 후, 몇번 유형의 군집인지 feature 추가해줌! 
+- 메타데이터 활용 → (1) 브랜드 언급량 feature 추가 (2) 브랜드 언급량 / 판매량 추이 데이터 이용해, timeseries k-means clustering 진행한 후, 몇번 유형의 군집인지 feature 추가해줌! 
 - LSTM -> LSTM 이용 Seq2Seq 모델
 - Seq2Seq window 90 < Seq2Seq window 120
 - 시계열예측 문제를 회귀문제로 변환 후, LGBM 모델 적용 (xgboost, catboost와 비교했을 때, lgbm 성능이 우수했음)
@@ -35,6 +37,7 @@
 - ![image](https://github.com/ohbigkite/2023_LG_AImers/assets/122765534/cf886573-492e-4521-bae1-fe828436510e)
 
 ### Conclusion
+
 - 신호대 잡음비가 강한 시계열 데이터 → 간단한 딥러닝 모델인 lstm을 사용했을 때 가장 성능 good
 - 딥러닝 모델에서, 메타데이터 활용 시 오히려 과적합 발생으로 성능 하락...
 - 2023년 3월 급감하는 구간을 이상치로 판단했기에 장기주기성을 포착해주기 위해 LSTM 기반 Seq2Seq을 사용 but 단순한 lstm의 성능이 우수했음 ( 모델의 복잡도 증가로 인한 성능하락으로 추측)
