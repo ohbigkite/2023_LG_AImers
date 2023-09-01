@@ -1,29 +1,29 @@
 # 2023_LG_AImers 3기 (2023.07 ~ 2023.08) 👩🏻‍💻
-## Phase1. 온라인 AI 교육 
+## 1️⃣ Phase1. 온라인 AI 교육 
 - 2023.07.01 ~ 2023.07.31
 
-## Phase2. 온라인 채널 제품 판매량 예측 AI 온라인 해커톤 
+## 2️⃣ Phase2. 온라인 채널 제품 판매량 예측 AI 온라인 해커톤 
 - 2023.08.01 ~ 2023.08.28
 - https://dacon.io/competitions/official/236129/overview/description
-- 결과 : **Public  0.54059 80위 / 747 ** Private 0.53146 61위/ 747 (상위 10% 이내)
+- 결과 : **_ Public  0.54059 80위 / 747 _** **_ Private 0.53146 61위/ 747 (상위 10% 이내) _**
   ![image](https://github.com/ohbigkite/2023_LG_AImers/assets/122765534/77deacd6-abd3-4ab3-85ca-71c50239c65a)
 - Domain : 시계열예측
 - Task : 15890개의 상품의 판매량 예측 ( train data : 459일치 , test data : 21일치)
 
-### Data
+### 📂 Data
 
 - train.csv : 상품별 대분류, 중분류, 소분류, 브랜드 코드, 판매량
 - sales.csv : meta 정보 - 제품 판매금액 데이터
 - brand_keyword_cnt.csv : meta 정보 - 브랜드 언급량 데이터
 - product_info.csv : meta 정보 - 제품 특성 데이터
   
-### Model
+### 👩🏻‍💻 Model
 
 - LSTM ⭐⭐
 - Seq2Seq ⭐
 - LGBM 
 
-### Trials
+### 💡 Trials
 
 - Multi Items Multivariate Timeseries Forecasting
 - Window size 90일로, 90일의 과거 데이터를 이용해 추후 21일 예측하는 식으로 학습 진행
@@ -35,7 +35,7 @@
 - RMSE loss function -> MAE loss function 변경
 - ![image](https://github.com/ohbigkite/2023_LG_AImers/assets/122765534/cf886573-492e-4521-bae1-fe828436510e)
 
-### Conclusion
+### 📝 Conclusion
 
 - 신호대 잡음비가 강한 시계열 데이터 → 간단한 딥러닝 모델인 lstm을 사용했을 때 가장 성능 good
 - 딥러닝 모델에서, 메타데이터 활용 시 오히려 과적합 발생으로 성능 하락...
